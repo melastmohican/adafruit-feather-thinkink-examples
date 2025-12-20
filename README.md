@@ -10,4 +10,5 @@ https://github.com/adafruit/awesome-feather \
 https://github.com/adafruit/Fritzing-Library/blob/master/parts/Adafruit%20Feather%20RP2040%20ThinkInk.fzpz \
 https://github.com/adafruit/Adafruit_EPD \
 https://learn.adafruit.com/bare-e-ink-displays-crash-course \
-https://github.com/ZinggJM/GxEPD2
+https://github.com/ZinggJM/GxEPD2 \
+[Tri-Color e ink display 1.54 inch e-ink small display screen, GDEM0154Z90](https://www.good-display.com/product/436.html)
