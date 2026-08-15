@@ -3,6 +3,10 @@
 ## Adafruit Feather RP2040 ThinkINK
 https://www.adafruit.com/product/5727 \
 https://www.adafruit.com/product/6373 (ZJY122250-0213AJH-E5) \
+https://www.adafruit.com/product/6383 (SSD1680Z) \
+https://www.adafruit.com/product/6395 (UC8253) \
+https://www.good-display.com/product/436.html (GDEM0154Z90 - SSD1681) \
+https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html (GDEY0213F51 - JD79661) \
 https://learn.adafruit.com/adafruit-rp2040-feather-thinkink \
 https://github.com/adafruit/Adafruit-Feather-RP2040-ThinkInk \
 https://github.com/earlephilhower/arduino-pico/blob/master/variants/adafruit_feather_thinkink/pins_arduino.h \
