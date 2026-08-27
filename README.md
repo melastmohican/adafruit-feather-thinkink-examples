@@ -16,3 +16,21 @@ https://github.com/adafruit/Adafruit_EPD \
 https://learn.adafruit.com/bare-e-ink-displays-crash-course \
 https://github.com/ZinggJM/GxEPD2 \
 [Tri-Color e ink display 1.54 inch e-ink small display screen, GDEM0154Z90](https://www.good-display.com/product/436.html)
+
+
+### Waveshare 3.52inch e-Paper (B)
+- **Link to page:** https://www.waveshare.com/3.52inch-e-paper-hat-b.htm
+- **Link to Wiki:** https://www.waveshare.com/wiki/3.52inch_e-Paper_HAT_(B)
+- **Link to Manual:** https://www.waveshare.com/wiki/3.52inch_e-Paper_HAT_(B)_Manual
+- **Colors:** red, black, white
+- **Resolution:** 360×240 · grayscale levels: 2
+- **Full Refresh supported:** Yes (16 s)
+- **Partial Refresh supported:** No
+- **IC driver:** UC8253
+- **Source code:** https://github.com/waveshareteam/e-Paper/blob/master/E-paper_Separate_Program/3in52_e-Paper_B
+- **Datasheet:** https://files.waveshare.com/wiki/3.52inch%20e-Paper%20HAT%20(B)/3.52inch-e-Paper_(B)-user-manual.pdf
+- **GxEPD2 support/driver:** Not in GxEPD2
+- **Good Display reference:** —
+- **Good Display source code:** —
+- **Rust embedded driver:** [epd-waveshare](https://crates.io/crates/epd-waveshare) ([GitHub](https://github.com/rust-embedded-community/epd-waveshare)) Currently not supported until PR https://github.com/rust-embedded-community/epd-waveshare/pull/255 is merged
+
