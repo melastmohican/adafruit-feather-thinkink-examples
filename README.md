@@ -17,6 +17,23 @@ https://learn.adafruit.com/bare-e-ink-displays-crash-course \
 https://github.com/ZinggJM/GxEPD2 \
 [Tri-Color e ink display 1.54 inch e-ink small display screen, GDEM0154Z90](https://www.good-display.com/product/436.html)
 
+### 13. 2.66inch e-Paper (B)
+- **Link to page:** https://www.waveshare.com/2.66inch-e-Paper-B.htm
+- **Link to Wiki:** http://www.waveshare.com/wiki/2.66inch_e-Paper_Module_(B)
+- **Link to Manual:** http://www.waveshare.com/wiki/2.66inch_e-Paper_Module_(B)_Manual
+- **Colors:** red, black, white
+- **Resolution:** 296×152 · grayscale levels: 2
+- **Full Refresh supported:** Yes (15 s)
+- **Partial Refresh supported:** No
+- **IC driver:** SSD1680  `[C]`
+- **Source code:** https://github.com/waveshareteam/e-Paper/blob/master/RaspberryPi_JetsonNano/c/lib/e-Paper/EPD_2in66b.c
+- **Datasheet:** https://files.waveshare.com/upload/e/ec/2.66inch-e-paper-b-specification.pdf
+- **GxEPD2 support/driver:** [GxEPD2_266c](https://github.com/ZinggJM/GxEPD2/blob/master/src/epd3c/GxEPD2_266c.h) (SSD1680)
+- **Good Display reference:** [GDEY0266Z90](https://www.good-display.com/product/430.html)
+- **Good Display source code:** https://www.good-display.com/product/430.html (demo code on product page)
+- **Rust embedded driver:** [epd-waveshare](https://crates.io/crates/epd-waveshare) ([GitHub](https://github.com/rust-embedded-community/epd-waveshare)) · [ssd1680](https://crates.io/crates/ssd1680) ([GitHub](https://github.com/mbv/ssd1680)) · [epd-datafuri](https://crates.io/crates/epd-datafuri) ([GitHub](https://github.com/ScottCUSA/magtag_esp_hal))
+
+DEPG0266RWS800F34HP N2405P10213-01-32043-1
 
 ### Waveshare 3.52inch e-Paper (B)
 - **Link to page:** https://www.waveshare.com/3.52inch-e-paper-hat-b.htm
@@ -33,4 +50,8 @@ https://github.com/ZinggJM/GxEPD2 \
 - **Good Display reference:** —
 - **Good Display source code:** —
 - **Rust embedded driver:** [epd-waveshare](https://crates.io/crates/epd-waveshare) ([GitHub](https://github.com/rust-embedded-community/epd-waveshare)) Currently not supported until PR https://github.com/rust-embedded-community/epd-waveshare/pull/255 is merged
+
+
+3.52 inch N14
+Q7GE30419NP3L0033
 
