@@ -35,6 +35,24 @@ https://github.com/ZinggJM/GxEPD2 \
 
 DEPG0266RWS800F34HP N2405P10213-01-32043-1
 
+### 2.66inch e-Paper (monochrome) / GDEY0266T90
+- **Link to page:** https://www.waveshare.com/2.66inch-e-paper.htm
+- **Link to Wiki:** https://www.waveshare.com/wiki/2.66inch_e-Paper_Module
+- **Colors:** black, white (supports 4-level grayscale)
+- **Resolution:** 296×152 · grayscale levels: 4
+- **Full Refresh supported:** Yes (~2 s)
+- **Fast Refresh supported:** Yes (1.0 s - 1.5 s)
+- **Partial Refresh supported:** Yes (~0.5 s)
+- **IC driver:** SSD1680
+- **Source code:** https://github.com/waveshareteam/e-Paper
+- **GxEPD2 support/driver:** [GxEPD2_266_GDEY0266T90](https://github.com/ZinggJM/GxEPD2/blob/master/src/epd/GxEPD2_266_GDEY0266T90.h)
+- **Good Display reference:** [GDEY0266T90](https://www.good-display.com/product/389.html)
+- **Sketches:**
+  - `arduino/Waveshare_2in66/` (Waveshare vendor driver)
+  - `arduino/Adafruit_EPD/ThinkInk_Waveshare_2in66/` (Adafruit_EPD `ThinkInk_266_Grayscale4_MFGN`)
+  - `arduino/GxEPD2/EPD/GDEY0266T90/Demo/` (GxEPD2 `GxEPD2_266_GDEY0266T90`)
+  - `arduino/good_display/GDEY0266T90/` (Good Display vendor sample)
+
 ### Waveshare 3.52inch e-Paper (B)
 - **Link to page:** https://www.waveshare.com/3.52inch-e-paper-hat-b.htm
 - **Link to Wiki:** https://www.waveshare.com/wiki/3.52inch_e-Paper_HAT_(B)
