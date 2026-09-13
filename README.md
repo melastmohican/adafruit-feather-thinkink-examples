@@ -7,6 +7,7 @@ https://www.adafruit.com/product/6383 (SSD1680Z) \
 https://www.adafruit.com/product/6395 (UC8253) \
 https://www.good-display.com/product/436.html (GDEM0154Z90 - SSD1681) \
 https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html (GDEY0213F51 - JD79661) \
+https://www.waveshare.com/1.54inch-e-paper-g.htm (Waveshare 1.54inch e-Paper (G) / GDEM0154F51H - JD79660) \
 https://learn.adafruit.com/adafruit-rp2040-feather-thinkink \
 https://github.com/adafruit/Adafruit-Feather-RP2040-ThinkInk \
 https://github.com/earlephilhower/arduino-pico/blob/master/variants/adafruit_feather_thinkink/pins_arduino.h \
@@ -72,4 +73,23 @@ DEPG0266RWS800F34HP N2405P10213-01-32043-1
 
 3.52 inch N14
 Q7GE30419NP3L0033
+
+### Waveshare 1.54inch e-Paper (G) / GDEM0154F51H
+- **Link to page:** https://www.waveshare.com/1.54inch-e-paper-g.htm
+- **Link to Wiki:** https://www.waveshare.com/wiki/1.54inch_e-Paper_Module_(G)
+- **SKU:** 30441 (FPC-8101)
+- **Colors:** black, white, yellow, red (4 native colors)
+- **Resolution:** 200×200 · 2 bits per pixel
+- **Full Refresh supported:** Yes (~20 s)
+- **Fast Refresh supported:** Yes (~12-15 s)
+- **Partial Refresh supported:** No
+- **IC driver:** JD79660AA
+- **Source code:** https://github.com/waveshareteam/e-Paper
+- **GxEPD2 support/driver:** [GxEPD2_154c_GDEM0154F51H](https://github.com/ZinggJM/GxEPD2/blob/master/src/epd4c/GxEPD2_154c_GDEM0154F51H.h)
+- **Good Display reference:** [GDEM0154F51H](https://www.good-display.com/product/534.html)
+- **Sketches:**
+  - `arduino/Waveshare_1in54g/` (Waveshare vendor driver)
+  - `arduino/Adafruit_EPD/ThinkInk_Waveshare_1in54g/` (Adafruit_EPD `ThinkInk_154_Quadcolor_Waveshare`)
+  - `arduino/GxEPD2/EPD/GDEM0154F51H/Demo/` (GxEPD2 `GxEPD2_154c_GDEM0154F51H`)
+  - `arduino/good_display/GDEM0154F51H/` (Good Display vendor sample)
 
