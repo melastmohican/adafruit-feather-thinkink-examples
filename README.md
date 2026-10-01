@@ -8,6 +8,7 @@ https://www.adafruit.com/product/6395 (UC8253) \
 https://www.good-display.com/product/436.html (GDEM0154Z90 - SSD1681) \
 https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html (GDEY0213F51 - JD79661) \
 https://www.waveshare.com/1.54inch-e-paper-g.htm (Waveshare 1.54inch e-Paper (G) / GDEM0154F51H - JD79660) \
+https://www.waveshare.com/3.7inch-e-paper-g.htm (Waveshare 3.7inch e-Paper (G) / GDEM037F51 - IST7163) \
 https://learn.adafruit.com/adafruit-rp2040-feather-thinkink \
 https://github.com/adafruit/Adafruit-Feather-RP2040-ThinkInk \
 https://github.com/earlephilhower/arduino-pico/blob/master/variants/adafruit_feather_thinkink/pins_arduino.h \
@@ -93,3 +94,19 @@ Q7GE30419NP3L0033
   - `arduino/GxEPD2/EPD/GDEM0154F51H/Demo/` (GxEPD2 `GxEPD2_154c_GDEM0154F51H`)
   - `arduino/good_display/GDEM0154F51H/` (Good Display vendor sample)
 
+
+### Waveshare 3.7inch e-Paper (G) / GDEM037F51
+- **Link to page:** https://www.waveshare.com/3.7inch-e-paper-g.htm
+- **SKU:** 31065 (FPC-2303)
+- **Colors:** black, white, yellow, red (4 native colors)
+- **Resolution:** 240×416 · 2 bits per pixel
+- **Full Refresh supported:** Yes (~20 s)
+- **Fast Refresh supported:** Yes (~12-15 s)
+- **Partial Refresh supported:** No
+- **IC driver:** IST7163
+- **Source code:** https://github.com/waveshareteam/e-Paper
+- **GxEPD2 support/driver:** Not in GxEPD2 upstream; local class `GxEPD2_370c_GDEM037F51` in the demo folder
+- **Sketches:**
+  - `arduino/Waveshare_3in7g/` (Waveshare vendor driver)
+  - `arduino/GxEPD2/EPD/GDEM037F51/Demo/` (GxEPD2 with local `GxEPD2_370c_GDEM037F51`)
+  - `arduino/good_display/GDEM037F51/` (Good Display vendor sample)
