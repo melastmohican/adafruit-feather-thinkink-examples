@@ -9,6 +9,7 @@ https://www.good-display.com/product/436.html (GDEM0154Z90 - SSD1681) \
 https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html (GDEY0213F51 - JD79661) \
 https://www.waveshare.com/1.54inch-e-paper-g.htm (Waveshare 1.54inch e-Paper (G) / GDEM0154F51H - JD79660) \
 https://www.waveshare.com/3.7inch-e-paper-g.htm (Waveshare 3.7inch e-Paper (G) / GDEM037F51 - IST7163) \
+https://www.good-display.com/product/462.html (GDEW0215T12 - UC8151D) \
 https://learn.adafruit.com/adafruit-rp2040-feather-thinkink \
 https://github.com/adafruit/Adafruit-Feather-RP2040-ThinkInk \
 https://github.com/earlephilhower/arduino-pico/blob/master/variants/adafruit_feather_thinkink/pins_arduino.h \
@@ -110,3 +111,25 @@ Q7GE30419NP3L0033
   - `arduino/Waveshare_3in7g/` (Waveshare vendor driver)
   - `arduino/GxEPD2/EPD/GDEM037F51/Demo/` (GxEPD2 with local `GxEPD2_370c_GDEM037F51`)
   - `arduino/good_display/GDEM037F51/` (Good Display vendor sample)
+
+### Good Display 2.15inch e-Paper (monochrome) / GDEW0215T12 (formerly GDEW0215T11)
+- **Link to page:** https://www.good-display.com/product/462.html
+- **FPC Marking:** `WFT0215CZA4`
+- **Colors:** black, white
+- **Resolution:** 208×112 · 1 bit per pixel
+- **Full Refresh supported:** Yes (~3 s)
+- **Partial Refresh supported:** Yes (~0.5 s)
+- **IC driver:** UC8151D `[C]`
+- **Datasheet:** [GDEW0215T12 Specification](https://v4.cecdn.yun300.cn/100001_1909185148/GDEW0215T12-new.pdf) · [IC Driver UC8151D](https://v4.cecdn.yun300.cn/100001_1909185148/UC8151D.pdf)
+- **GxEPD2 support/driver:** Not in GxEPD2 upstream; local class `GxEPD2_215_GDEW0215T12` in demo folder
+- **Good Display reference:** [GDEW0215T12](https://www.good-display.com/product/462.html)
+- **Good Display source code:** https://www.good-display.com/product/462.html
+- **Rust embedded driver:** [uc8151](https://crates.io/crates/uc8151) ([GitHub](https://github.com/9names/uc8151)) · [epd-waveshare](https://crates.io/crates/epd-waveshare) ([GitHub](https://github.com/rust-embedded-community/epd-waveshare))
+- **Sketches:**
+  - `arduino/Adafruit_EPD/ThinkInk_GDEW0215T12/` (Adafruit_EPD `ThinkInk_215_Mono_GDEW0215T12`)
+  - `arduino/GxEPD2/EPD/GDEW0215T12/Demo/` (GxEPD2 with local `GxEPD2_215_GDEW0215T12`)
+  - `arduino/good_display/GDEW0215T12/` (Good Display vendor sample)
+
+WFT0215CZA4 HZ 2546
+
+
