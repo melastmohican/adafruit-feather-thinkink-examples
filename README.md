@@ -10,6 +10,7 @@ https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pix
 https://www.waveshare.com/1.54inch-e-paper-g.htm (Waveshare 1.54inch e-Paper (G) / GDEM0154F51H - JD79660) \
 https://www.waveshare.com/3.7inch-e-paper-g.htm (Waveshare 3.7inch e-Paper (G) / GDEM037F51 - IST7163) \
 https://www.good-display.com/product/462.html (GDEW0215T12 - UC8151D) \
+https://www.good-display.com/product/555.html (GDEM0154F61H - SSD2681) \
 https://learn.adafruit.com/adafruit-rp2040-feather-thinkink \
 https://github.com/adafruit/Adafruit-Feather-RP2040-ThinkInk \
 https://github.com/earlephilhower/arduino-pico/blob/master/variants/adafruit_feather_thinkink/pins_arduino.h \
@@ -131,5 +132,24 @@ Q7GE30419NP3L0033
   - `arduino/good_display/GDEW0215T12/` (Good Display vendor sample)
 
 WFT0215CZA4 HZ 2546
+
+### Good Display 1.54inch 4-Color e-Paper / GDEM0154F61H
+- **Link to page:** https://www.good-display.com/product/555.html
+- **FPC Marking:** `FPC-8101`
+- **Colors:** black, white, yellow, red (4 native colors)
+- **Resolution:** 200×200 · 2 bits per pixel
+- **Full Refresh supported:** Yes (~20 s)
+- **Fast Refresh supported:** Yes (~12-15 s)
+- **Partial Refresh supported:** No
+- **IC driver:** SSD2681
+- **Datasheet:** [GDEM0154F61H Specification](https://v4.cecdn.yun300.cn/100001_1909185148/GDEM0154F61H.pdf) · [IC Driver SSD2681](https://v4.cecdn.yun300.cn/100001_1909185148/SSD2681.pdf)
+- **GxEPD2 support/driver:** Not in GxEPD2 upstream; local class `GxEPD2_154c_GDEM0154F61H` in demo folder
+- **Good Display reference:** [GDEM0154F61H](https://www.good-display.com/product/555.html)
+- **Good Display source code:** https://www.good-display.com/product/555.html
+- **Sketches:**
+  - `arduino/Adafruit_EPD/ThinkInk_GDEM0154F61H/` (Adafruit_EPD `ThinkInk_154_Quadcolor_GDEM0154F61H`)
+  - `arduino/GxEPD2/EPD/GDEM0154F61H/Demo/` (GxEPD2 with local `GxEPD2_154c_GDEM0154F61H`)
+  - `arduino/good_display/GDEM0154F61H/` (Good Display vendor sample)
+
 
 
