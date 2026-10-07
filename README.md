@@ -11,6 +11,8 @@ https://www.waveshare.com/1.54inch-e-paper-g.htm (Waveshare 1.54inch e-Paper (G)
 https://www.waveshare.com/3.7inch-e-paper-g.htm (Waveshare 3.7inch e-Paper (G) / GDEM037F51 - IST7163) \
 https://www.good-display.com/product/462.html (GDEW0215T12 - UC8151D) \
 https://www.good-display.com/product/555.html (GDEM0154F61H - SSD2681) \
+https://www.good-display.com/product/463.html (GDEY0213F52 - JD79676A) \
+https://www.good-display.com/product/501.html (GDEY0266T90H - SSD1685) \
 https://learn.adafruit.com/adafruit-rp2040-feather-thinkink \
 https://github.com/adafruit/Adafruit-Feather-RP2040-ThinkInk \
 https://github.com/earlephilhower/arduino-pico/blob/master/variants/adafruit_feather_thinkink/pins_arduino.h \
@@ -151,5 +153,42 @@ WFT0215CZA4 HZ 2546
   - `arduino/GxEPD2/EPD/GDEM0154F61H/Demo/` (GxEPD2 with local `GxEPD2_154c_GDEM0154F61H`)
   - `arduino/good_display/GDEM0154F61H/` (Good Display vendor sample)
 
+### Good Display 2.13inch 4-Color e-Paper / GDEY0213F52
+- **Link to page:** https://www.good-display.com/product/463.html
+- **FPC Marking:** `FPC-J002`
+- **Colors:** black, white, yellow, red (4 native colors)
+- **Resolution:** 250×122 (128×250 native RAM, 122 visible) · 2 bits per pixel
+- **Full Refresh supported:** Yes (~11 s)
+- **Partial Refresh supported:** No
+- **IC driver:** JD79676A `[C]`
+- **Datasheet:** [GDEY0213F52 Specification](https://v4.cecdn.yun300.cn/100001_1909185148/GDEY0213F52_Specification.pdf) · [IC Driver JD79676A](https://v4.cecdn.yun300.cn/100001_1909185148/JD79676A.pdf)
+- **GxEPD2 support/driver:** Not in GxEPD2 upstream; local class `GxEPD2_213c_GDEY0213F52` in demo folder (needs a 40 s BUSY timeout)
+- **Adafruit_EPD support:** Not upstream; local class `ThinkInk_213_Quadcolor_GDEY0213F52` subclassing `Adafruit_JD79661` with Good Display's short init (`0xE9 0x01`, `0x04`)
+- **Rust embedded driver:** None published for JD79676A that I found
+- **Good Display reference:** [GDEY0213F52](https://www.good-display.com/product/463.html)
+- **Good Display source code:** [AU-GDEY0213F52-20240827.rar](https://v4.cecdn.yun300.cn/100001_1909185148/AU-GDEY0213F52-20240827.rar)
+- **Sketches:**
+  - `arduino/Adafruit_EPD/ThinkInk_GDEY0213F52/` (Adafruit_EPD `ThinkInk_213_Quadcolor_GDEY0213F52`)
+  - `arduino/GxEPD2/EPD/GDEY0213F52/Demo/` (GxEPD2 with local `GxEPD2_213c_GDEY0213F52`)
+  - `arduino/good_display/GDEY0213F52/` (Good Display vendor sample)
 
-
+### Good Display 2.66inch e-Paper (monochrome, 360×184) / GDEY0266T90H
+- **Link to page:** https://www.good-display.com/product/501.html
+- **FPC Marking:** `FPC-H011`
+- **Colors:** black, white
+- **Resolution:** 360×184 (184×360 native RAM) · 1 bit per pixel
+- **Full Refresh supported:** Yes (~2 s)
+- **Fast Refresh supported:** Yes (~1.5 s and ~1.0 s)
+- **Partial Refresh supported:** Yes (~0.4 s)
+- **IC driver:** SSD1685 `[C]`
+- **Datasheet:** [GDEY0266T90H Specification](https://v4.cecdn.yun300.cn/100001_1909185148/GDEY0266T90H.pdf) · [IC Driver SSD1685](https://v4.cecdn.yun300.cn/100001_1909185148/SSD1685.pdf)
+- **GxEPD2 support/driver:** Not in GxEPD2 upstream; local class `GxEPD2_266_GDEY0266T90H` in demo folder, derived from upstream `GxEPD2_290_GDEY029T71H` (same SSD1685)
+- **Adafruit_EPD support:** Not upstream; local class `ThinkInk_266_Mono_GDEY0266T90H` subclassing `Adafruit_SSD1680`
+- **Rust embedded driver:** None published for SSD1685 that I found
+- **Notes:** Set `0x21` source resolution to 184 (`B[7:6]=01`); the power-on default is 200 and shows a noise strip along one edge. GxEPD2 uses RAM entry mode `0x03`; Good Display's own `0x01` shows a mirrored image.
+- **Good Display reference:** [GDEY0266T90H](https://www.good-display.com/product/501.html)
+- **Good Display source code:** [AU-GDEY0266T90H-2FP-20230915.rar](https://v4.cecdn.yun300.cn/100001_1909185148/AU-GDEY0266T90H-2FP-20230915.rar)
+- **Sketches:**
+  - `arduino/Adafruit_EPD/ThinkInk_GDEY0266T90H/` (Adafruit_EPD `ThinkInk_266_Mono_GDEY0266T90H`)
+  - `arduino/GxEPD2/EPD/GDEY0266T90H/Demo/` (GxEPD2 with local `GxEPD2_266_GDEY0266T90H`)
+  - `arduino/good_display/GDEY0266T90H/` (Good Display vendor sample)
