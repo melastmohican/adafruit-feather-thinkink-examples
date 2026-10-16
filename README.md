@@ -13,6 +13,7 @@ https://www.good-display.com/product/462.html (GDEW0215T12 - UC8151D) \
 https://www.good-display.com/product/555.html (GDEM0154F61H - SSD2681) \
 https://www.good-display.com/product/463.html (GDEY0213F52 - JD79676A) \
 https://www.good-display.com/product/501.html (GDEY0266T90H - SSD1685) \
+https://www.good-display.com/product/435.html (GDEQ0426T82 - SSD1677) \
 https://learn.adafruit.com/adafruit-rp2040-feather-thinkink \
 https://github.com/adafruit/Adafruit-Feather-RP2040-ThinkInk \
 https://github.com/earlephilhower/arduino-pico/blob/master/variants/adafruit_feather_thinkink/pins_arduino.h \
@@ -22,6 +23,13 @@ https://github.com/adafruit/Adafruit_EPD \
 https://learn.adafruit.com/bare-e-ink-displays-crash-course \
 https://github.com/ZinggJM/GxEPD2 \
 [Tri-Color e ink display 1.54 inch e-ink small display screen, GDEM0154Z90](https://www.good-display.com/product/436.html)
+
+## Documentation Indices
+- [Arduino Examples README](arduino/README.md): Master index of all Arduino sketches, board pin configurations, and compilation commands.
+- [CircuitPython Examples README](circuitpython/README.md): Guide for running CircuitPython scripts, libraries, and bitmap assets.
+- [Adafruit_EPD README](arduino/Adafruit_EPD/README.md): Details on Adafruit_EPD sketches and custom panel subclasses.
+- [GxEPD2 README](arduino/GxEPD2/README.md): Details on GxEPD2 paged rendering, full buffering, and custom panel drivers.
+- [Good Display Vendor Drivers README](arduino/good_display/README.md): Details on bare-metal register drivers adapted for `SPI1`.
 
 ### 13. 2.66inch e-Paper (B)
 - **Link to page:** https://www.waveshare.com/2.66inch-e-Paper-B.htm
@@ -38,6 +46,12 @@ https://github.com/ZinggJM/GxEPD2 \
 - **Good Display reference:** [GDEY0266Z90](https://www.good-display.com/product/430.html)
 - **Good Display source code:** https://www.good-display.com/product/430.html (demo code on product page)
 - **Rust embedded driver:** [epd-waveshare](https://crates.io/crates/epd-waveshare) ([GitHub](https://github.com/rust-embedded-community/epd-waveshare)) · [ssd1680](https://crates.io/crates/ssd1680) ([GitHub](https://github.com/mbv/ssd1680)) · [epd-datafuri](https://crates.io/crates/epd-datafuri) ([GitHub](https://github.com/ScottCUSA/magtag_esp_hal))
+- **Sketches:**
+  - `arduino/Waveshare_2in66b_PanelID/` (Waveshare vendor driver with panel ID query)
+  - `arduino/Waveshare_2in66br/` (Waveshare vendor driver with graphics and text demo)
+  - `arduino/Adafruit_EPD/ThinkInk_Waveshare_2in66b/` (Adafruit_EPD `ThinkInk_266_Tricolor_Z90`)
+  - `arduino/GxEPD2/EPD/GDEY0266Z90/Demo/` (GxEPD2 `GxEPD2_266c`)
+  - `arduino/good_display/GDEY0266Z90/` (Good Display vendor sample)
 
 DEPG0266RWS800F34HP N2405P10213-01-32043-1
 
@@ -71,9 +85,13 @@ DEPG0266RWS800F34HP N2405P10213-01-32043-1
 - **Source code:** https://github.com/waveshareteam/e-Paper/blob/master/E-paper_Separate_Program/3in52_e-Paper_B
 - **Datasheet:** https://files.waveshare.com/wiki/3.52inch%20e-Paper%20HAT%20(B)/3.52inch-e-Paper_(B)-user-manual.pdf
 - **GxEPD2 support/driver:** Not in GxEPD2
-- **Good Display reference:** —
-- **Good Display source code:** —
+- **Good Display reference:** None
+- **Good Display source code:** None
 - **Rust embedded driver:** [epd-waveshare](https://crates.io/crates/epd-waveshare) ([GitHub](https://github.com/rust-embedded-community/epd-waveshare)) Currently not supported until PR https://github.com/rust-embedded-community/epd-waveshare/pull/255 is merged
+- **Sketches:**
+  - `arduino/Waveshare_3in52/` (Waveshare vendor driver)
+  - `arduino/Waveshare_3in52_PanelID/` (Waveshare vendor driver with panel ID query)
+  - `arduino/Adafruit_EPD/ThinkInk_Waveshare_3in52/` (Adafruit_EPD `ThinkInk_352_Tricolor_Z40`)
 
 
 3.52 inch N14
@@ -192,3 +210,89 @@ WFT0215CZA4 HZ 2546
   - `arduino/Adafruit_EPD/ThinkInk_GDEY0266T90H/` (Adafruit_EPD `ThinkInk_266_Mono_GDEY0266T90H`)
   - `arduino/GxEPD2/EPD/GDEY0266T90H/Demo/` (GxEPD2 with local `GxEPD2_266_GDEY0266T90H`)
   - `arduino/good_display/GDEY0266T90H/` (Good Display vendor sample)
+
+### Good Display 4.26inch e-Paper (monochrome, 800×480) / GDEQ0426T82
+- **Link to page:** https://www.good-display.com/product/435.html
+- **Colors:** black, white
+- **Resolution:** 800×480 · 1 bit per pixel
+- **Full Refresh supported:** Yes (~1.6 s)
+- **Partial Refresh supported:** Yes (~0.45 s)
+- **IC driver:** SSD1677 `[C]`
+- **GxEPD2 support/driver:** Upstream `GxEPD2_426_GDEQ0426T82` (capped to 64 KB buffer with `MAX_HEIGHT`)
+- **Adafruit_EPD support:** Upstream `ThinkInk_426_Grayscale4_GDEQ`
+- **Good Display reference:** [GDEQ0426T82](https://www.good-display.com/product/435.html)
+- **Sketches:**
+  - `arduino/good_display/GDEQ0426T82_MacPaint/`: Direct SSD1677 register control with 48 KB canvas buffering and 18-byte partial window streaming (~0.45s per dot, zero ghosting).
+  - `arduino/Adafruit_EPD/ThinkInk_GDEQ0426T82_MacPaint/`: Adafruit_EPD `ThinkInk_426_Grayscale4_GDEQ` benchmark (~1.5s per dot due to full 48 KB SPI buffer retransmissions).
+  - `arduino/GxEPD2/EPD/GDEQ0426T82/MacPaint/`: GxEPD2 handwriting partial update demo with trailing dots redrawn in the paged loop to prevent ghosting (~0.5s per dot).
+
+### Good Display 1.54inch Tri-Color e-Paper / GDEM0154Z90 (GDEH0154Z90)
+- **Link to page:** https://www.good-display.com/product/436.html
+- **Colors:** red, black, white
+- **Resolution:** 200×200 · 2 bits per pixel
+- **Full Refresh supported:** Yes (~15 s)
+- **Partial Refresh supported:** No
+- **IC driver:** SSD1681
+- **GxEPD2 support/driver:** Upstream `GxEPD2_154_Z90c`
+- **Adafruit_EPD support:** Upstream `ThinkInk_154_Tricolor_Z90`
+- **CircuitPython support:** `adafruit_ssd1681.SSD1681`
+- **Sketches and Scripts:**
+  - `arduino/Adafruit_EPD/ThinkInk_tricolor/` (Adafruit_EPD banner and shapes test)
+  - `arduino/Adafruit_EPD/ThinkInk_tricolor_image/` (Adafruit_EPD 200×200 tricolor image renderer)
+  - `arduino/Adafruit_EPD/graphicstest/` (Adafruit_EPD graphics and text test)
+  - `arduino/GxEPD2/EPD/GDEH0154Z90/Demo/` (GxEPD2 `GxEPD2_154_Z90c`)
+  - `circuitpython/ssd1681_simpletest.py` (CircuitPython ruler test)
+  - `circuitpython/ssd1681_image.py` (CircuitPython 200×200 bitmap renderer)
+
+### Good Display 2.13inch 4-Color e-Paper / GDEY0213F51 (Adafruit 6373 / ZJY122250-0213AJH-E5)
+- **Link to page:** https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html
+- **Adafruit Product:** https://www.adafruit.com/product/6373
+- **Colors:** red, yellow, black, white (4 native colors)
+- **Resolution:** 250×122 · 2 bits per pixel
+- **Full Refresh supported:** Yes (~15 s)
+- **Partial Refresh supported:** No
+- **IC driver:** JD79661
+- **GxEPD2 support/driver:** Upstream `GxEPD2_213c_GDEY0213F51`
+- **Adafruit_EPD support:** Upstream `ThinkInk_213_Quadcolor_AJHE5`
+- **CircuitPython support:** `adafruit_jd79661.JD79661` and `adafruit_epd.jd79661`
+- **Sketches and Scripts:**
+  - `arduino/Adafruit_EPD/ThinkInk_quadcolor/` (Adafruit_EPD 4-color banner and shapes test)
+  - `arduino/Adafruit_EPD/ThinkInk_quadcolor_image/` (Adafruit_EPD 250×122 4-color image renderer)
+  - `arduino/GxEPD2/EPD/GDEY0213F51/Demo/` (GxEPD2 `GxEPD2_213c_GDEY0213F51`)
+  - `circuitpython/epd_simpletest.py` (CircuitPython framebuf text and boxes)
+  - `circuitpython/jd79661_simpletest.py` (CircuitPython ruler bitmap display)
+  - `circuitpython/jd79661_image.py` (CircuitPython 250×122 bitmap renderer)
+
+### Good Display 2.13inch Monochrome e-Paper / GDEM0213B74 (Adafruit 6383)
+- **Link to page:** https://www.adafruit.com/product/6383
+- **Colors:** black, white
+- **Resolution:** 250×122 · 1 bit per pixel
+- **Full Refresh supported:** Yes (~2 s)
+- **Partial Refresh supported:** Yes (~0.3 s)
+- **IC driver:** SSD1680
+- **GxEPD2 support/driver:** Upstream `GxEPD2_213_B74`
+- **Sketches:**
+  - `arduino/GxEPD2/EPD/GDEM0213B74/Demo/` (GxEPD2 `GxEPD2_213_B74`)
+
+### Good Display 3.7inch Monochrome e-Paper / GDEY037T03 (Adafruit 6395)
+- **Link to page:** https://www.adafruit.com/product/6395
+- **Colors:** black, white
+- **Resolution:** 240×416 · 1 bit per pixel
+- **Full Refresh supported:** Yes (~2 s)
+- **Partial Refresh supported:** Yes (~0.3 s)
+- **IC driver:** SSD1677
+- **GxEPD2 support/driver:** Upstream `GxEPD2_370_GDEY037T03`
+- **Sketches:**
+  - `arduino/GxEPD2/EPD/GDEY037T03/Demo/` (GxEPD2 `GxEPD2_370_GDEY037T03`)
+
+### Board Bringup and Peripheral Utilities
+- `arduino/Blink/`: Onboard red LED test toggling GPIO13 (`LED_BUILTIN`).
+- `arduino/RGBlink/`: Onboard NeoPixel test cycling red, green, and blue using GPIO20 (data) and GPIO21 (power gate).
+- `arduino/GxEPD2/GxEPD2_ThinkInk_TriColor/`: Generic 3-color GxEPD2 demo template for the Feather ThinkInk.
+- `arduino/GxEPD2/GxEPD2_ThinkInk_TriColor_Image/`: Generic 3-color bitmap template for GxEPD2.
+- `arduino/GxEPD2/GxEPD2_ThinkInk_QuadColor/`: Generic 4-color GxEPD2 demo template for the Feather ThinkInk.
+- `arduino/GxEPD2/GxEPD2_ThinkInk_Image/`: Generic monochrome bitmap template for GxEPD2.
+- `circuitpython/rgblink.py`: Blinks onboard NeoPixel red and green.
+- `circuitpython/neopixel_rgb.py`: Basic color cycle on onboard NeoPixel.
+- `circuitpython/neopixel_colorwheel.py`: Rainbow cycle on onboard NeoPixel.
+- `circuitpython/neopixel_led_animation.py`: NeoPixel animation library demo.
