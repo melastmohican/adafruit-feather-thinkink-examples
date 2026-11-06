@@ -14,6 +14,8 @@ https://www.good-display.com/product/555.html (GDEM0154F61H - SSD2681) \
 https://www.good-display.com/product/463.html (GDEY0213F52 - JD79676A) \
 https://www.good-display.com/product/501.html (GDEY0266T90H - SSD1685) \
 https://www.good-display.com/product/435.html (GDEQ0426T82 - SSD1677) \
+https://www.good-display.com/product/742.html (GDEY029F52 - JD79661) \
+https://www.waveshare.com/2.9inch-e-paper-module-g.htm (Waveshare 2.9inch e-Paper (G) - JD79661) \
 https://learn.adafruit.com/adafruit-rp2040-feather-thinkink \
 https://github.com/adafruit/Adafruit-Feather-RP2040-ThinkInk \
 https://github.com/earlephilhower/arduino-pico/blob/master/variants/adafruit_feather_thinkink/pins_arduino.h \
@@ -222,6 +224,7 @@ WFT0215CZA4 HZ 2546
 - **Adafruit_EPD support:** Upstream `ThinkInk_426_Grayscale4_GDEQ`
 - **Good Display reference:** [GDEQ0426T82](https://www.good-display.com/product/435.html)
 - **Sketches:**
+  - `arduino/GxEPD2/EPD/GDEQ0426T82/Demo/`: GxEPD2 6-screen demo suite (`GxEPD2_426_GDEQ0426T82`, buffer capped to 64 KB).
   - `arduino/good_display/GDEQ0426T82_MacPaint/`: Direct SSD1677 register control with 48 KB canvas buffering and 18-byte partial window streaming (~0.45s per dot, zero ghosting).
   - `arduino/Adafruit_EPD/ThinkInk_GDEQ0426T82_MacPaint/`: Adafruit_EPD `ThinkInk_426_Grayscale4_GDEQ` benchmark (~1.5s per dot due to full 48 KB SPI buffer retransmissions).
   - `arduino/GxEPD2/EPD/GDEQ0426T82/MacPaint/`: GxEPD2 handwriting partial update demo with trailing dots redrawn in the paged loop to prevent ghosting (~0.5s per dot).
@@ -296,3 +299,22 @@ WFT0215CZA4 HZ 2546
 - `circuitpython/neopixel_rgb.py`: Basic color cycle on onboard NeoPixel.
 - `circuitpython/neopixel_colorwheel.py`: Rainbow cycle on onboard NeoPixel.
 - `circuitpython/neopixel_led_animation.py`: NeoPixel animation library demo.
+
+### Good Display 2.9inch 4-Color e-Paper / GDEY029F52
+- **Link to page:** https://www.good-display.com/product/742.html
+- **Colors:** black, white, yellow, red (4 native colors)
+- **Resolution:** 296×128 (128×296 native raster) · 2 bits per pixel
+- **Full Refresh supported:** Yes (~16 s)
+- **Fast Refresh supported:** Yes (~11 s)
+- **Partial Refresh supported:** No
+- **IC driver:** JD79661
+- **GxEPD2 support/driver:** Not in GxEPD2 upstream; local class `GxEPD2_290c_GDEY029F52` in the demo folder
+- **Adafruit_EPD support:** Not upstream; local class `ThinkInk_290_Quadcolor_GDEY029F52` subclassing `Adafruit_JD79661` with Good Display's init table (PSR `0x0F 0x29`)
+- **Notes:** Not the same panel as GDEY029F51H (168×384, JD79667). Waveshare's current 2.9inch e-Paper (G) is this same 296×128 glass.
+- **Good Display reference:** [GDEY029F52](https://www.good-display.com/product/742.html)
+- **Waveshare page:** https://www.waveshare.com/2.9inch-e-paper-module-g.htm
+- **Sketches:**
+  - `arduino/Waveshare_2in9g/` (Waveshare vendor driver)
+  - `arduino/Adafruit_EPD/ThinkInk_GDEY029F52/` (Adafruit_EPD with local `ThinkInk_290_Quadcolor_GDEY029F52`)
+  - `arduino/GxEPD2/EPD/GDEY029F52/Demo/` (GxEPD2 with local `GxEPD2_290c_GDEY029F52`)
+  - `arduino/good_display/GDEY029F52/` (Good Display vendor sample)
