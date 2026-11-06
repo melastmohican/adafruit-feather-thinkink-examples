@@ -16,6 +16,8 @@ https://www.good-display.com/product/501.html (GDEY0266T90H - SSD1685) \
 https://www.good-display.com/product/435.html (GDEQ0426T82 - SSD1677) \
 https://www.good-display.com/product/742.html (GDEY029F52 - JD79661) \
 https://www.waveshare.com/2.9inch-e-paper-module-g.htm (Waveshare 2.9inch e-Paper (G) - JD79661) \
+https://www.good-display.com/product/386.html (GDEY042T81 - SSD1683) \
+https://www.waveshare.com/4.2inch-e-paper-module.htm (Waveshare 4.2inch e-Paper Module V2 - SSD1683) \
 https://learn.adafruit.com/adafruit-rp2040-feather-thinkink \
 https://github.com/adafruit/Adafruit-Feather-RP2040-ThinkInk \
 https://github.com/earlephilhower/arduino-pico/blob/master/variants/adafruit_feather_thinkink/pins_arduino.h \
@@ -318,3 +320,21 @@ WFT0215CZA4 HZ 2546
   - `arduino/Adafruit_EPD/ThinkInk_GDEY029F52/` (Adafruit_EPD with local `ThinkInk_290_Quadcolor_GDEY029F52`)
   - `arduino/GxEPD2/EPD/GDEY029F52/Demo/` (GxEPD2 with local `GxEPD2_290c_GDEY029F52`)
   - `arduino/good_display/GDEY029F52/` (Good Display vendor sample)
+
+### Good Display 4.2inch e-Paper (monochrome, 400×300) / GDEY042T81
+- **Link to page:** https://www.good-display.com/product/386.html
+- **Waveshare page:** https://www.waveshare.com/4.2inch-e-paper-module.htm (4.2inch e-Paper Module V2, same glass)
+- **Colors:** black, white (supports 4-level grayscale)
+- **Resolution:** 400×300 · grayscale levels: 4
+- **Full Refresh supported:** Yes (~2 s)
+- **Fast Refresh supported:** Yes (1.0 s - 1.5 s)
+- **Partial Refresh supported:** Yes (~0.3 s)
+- **IC driver:** SSD1683 (BUSY active HIGH)
+- **GxEPD2 support/driver:** Upstream `GxEPD2_420_GDEY042T81`
+- **Adafruit_EPD support:** Upstream `ThinkInk_420_Grayscale4_MFGN`
+- **Good Display reference:** [GDEY042T81](https://www.good-display.com/product/386.html)
+- **Sketches:**
+  - `arduino/Waveshare_4in2/` (Waveshare `epd4in2_V2` vendor driver: 2-gray, partial refresh, 4-gray)
+  - `arduino/Adafruit_EPD/ThinkInk_GDEY042T81/` (Adafruit_EPD `ThinkInk_420_Grayscale4_MFGN`, 4-level grayscale)
+  - `arduino/GxEPD2/EPD/GDEY042T81/Demo/` (GxEPD2 `GxEPD2_420_GDEY042T81`, 6-screen demo)
+  - `arduino/good_display/GDEY042T81/` (Good Display vendor sample)
