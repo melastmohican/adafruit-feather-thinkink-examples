@@ -320,6 +320,7 @@ WFT0215CZA4 HZ 2546
   - `arduino/Adafruit_EPD/ThinkInk_GDEY029F52/` (Adafruit_EPD with local `ThinkInk_290_Quadcolor_GDEY029F52`)
   - `arduino/GxEPD2/EPD/GDEY029F52/Demo/` (GxEPD2 with local `GxEPD2_290c_GDEY029F52`)
   - `arduino/good_display/GDEY029F52/` (Good Display vendor sample)
+- **Verified on hardware:** all four sketches on the Feather RP2040 ThinkInk.
 
 ### Good Display 4.2inch e-Paper (monochrome, 400×300) / GDEY042T81
 - **Link to page:** https://www.good-display.com/product/386.html
@@ -338,3 +339,4 @@ WFT0215CZA4 HZ 2546
   - `arduino/Adafruit_EPD/ThinkInk_GDEY042T81/` (Adafruit_EPD `ThinkInk_420_Grayscale4_MFGN`, 4-level grayscale)
   - `arduino/GxEPD2/EPD/GDEY042T81/Demo/` (GxEPD2 `GxEPD2_420_GDEY042T81`, 6-screen demo)
   - `arduino/good_display/GDEY042T81/` (Good Display vendor sample)
+- **Verified on hardware:** all four sketches on the Feather RP2040 ThinkInk.
